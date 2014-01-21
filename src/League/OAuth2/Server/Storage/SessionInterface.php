@@ -74,7 +74,7 @@ interface SessionInterface
      * @param  int    $sessionId   The session ID
      * @param  string $accessToken The access token
      * @param  int    $expireTime  Unix timestamp of the access token expiry time
-     * @return int                 The access token ID
+     * @return void
      */
     public function associateAccessToken($sessionId, $accessToken, $expireTime);
 
@@ -315,8 +315,7 @@ interface SessionInterface
      * <code>
      * array (
      *     array(
-     *         'id'     =>  (int),
-     *         'scope'  =>  (string),
+     *         'key'    =>  (string),
      *         'name'   =>  (string),
      *         'description'    =>  (string)
      *     ),
