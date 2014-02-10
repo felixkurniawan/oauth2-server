@@ -201,7 +201,7 @@ class Password implements GrantTypeInterface {
 
         // Associate scopes with the access token
         foreach ($authParams['scopes'] as $scope) {
-            $this->authServer->getStorage('session')->associateScope($accessTokenId, $scope['id']);
+            $this->authServer->getStorage('session')->associateScope($accessTokenId, $scope['scope_id']);
         }
 
         $response = array(
